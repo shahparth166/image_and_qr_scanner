@@ -84,30 +84,18 @@ flutter run
 
 ## Build
 
-For smaller Android downloads, build one release APK per CPU architecture:
-
-```bash
-flutter build apk --release --split-per-abi
-```
-
-This creates device-specific APKs under `build/app/outputs/flutter-apk/`:
-
-- `app-armeabi-v7a-release.apk` for 32-bit ARM devices.
-- `app-arm64-v8a-release.apk` for 64-bit ARM devices.
-- `app-x86_64-release.apk` for x86_64 devices and emulators.
-
-The latest build produced APKs of 19.9 MB, 24.2 MB, and 26.7 MB respectively. Actual sizes can vary between builds. Install only the APK matching the device architecture.
-
-To build one larger release APK containing all supported architectures:
-
-```bash
-flutter build apk --release
-```
-
-For local debugging, build the larger debug APK with:
+Android debug APK:
 
 ```bash
 flutter build apk --debug
+```
+
+The APK is written to `build/app/outputs/flutter-apk/app-debug.apk`.
+
+For release:
+
+```bash
+flutter build apk --release
 ```
 
 ## Verification status
